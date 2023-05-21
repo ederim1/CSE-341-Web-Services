@@ -2,3 +2,12 @@ GET http://localhost:3000 HTTP/1.1
 
 ###
 GET http://localhost:3000/second HTTP/1.1
+
+###
+GET https://eder341test.onrender.com/second 
+
+###
+GET http://localhost:3000/api/contacts HTTP/1.1
+
+###
+GET http://localhost:3000/api/contacts/64686eac067bf9ea247f376a HTTP/1.1
