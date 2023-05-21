@@ -11,3 +11,21 @@ GET http://localhost:3000/api/contacts HTTP/1.1
 
 ###
 GET http://localhost:3000/api/contacts/64686eac067bf9ea247f376a HTTP/1.1
+
+###
+POST http://localhost:3000/api/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Jamal",
+    "lastName": "Murray",
+    "email": "jMurray@eyoutv.com",
+    "position": "Point guard",
+    "birthday": "02/23/97"
+
+}
+###
+PUT http://localhost:3000/api/contacts/6469c242f70dbb1747492031 HTTP/1.1
+
+###
+DELETE http://localhost:3000/api/contacts/64686eac067bf9ea247f376a HTTP/1.1
