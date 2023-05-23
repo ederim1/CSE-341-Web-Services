@@ -41,11 +41,19 @@ router.put('/contacts/:id', (req, res) => {
 
 // Delete contacts by ID
 router.delete('/contacts/:id', (req, res) => {
-    const { id } = req.params; 
+    const { id } = req.params;
     contactSchema
-        .remove({ _id: id })
-        .then((data) => res.json(data))
-        .catch((error) => res.json({ message: error }));
+        .remove({ _id: id }).then((data) => res.json(data)).catch((error) => res.json({ message: error }));
+
 });
+
+// Delete contacts by ID
+// router.delete('/contacts/:id', (req, res) => {
+//     const { id } = req.params; 
+//     contactSchema
+//         .remove({ _id: id })
+//         .then((data) => res.json(data))
+//         .catch((error) => res.json({ message: error }));
+// });
 
 module.exports = router;
