@@ -1,25 +1,20 @@
-{
-    "contact": {
+[{
       "firstName": "Eder",
       "lastName": "Morales",
       "email": "eddmorales@eyoutv.com",
       "position": "Small Forward",
       "birthday": "08/05/87"
-    },
-
-    "contact2": {
+    },{
       "firstName": "Jimmy",
       "lastName": "Butler",
       "email": "jButler@eyoutv.com",
       "position": "Power Forward",
       "birthday": "09/14/89"
-    },
-    
-    "contact3": {
+    },{
       "firstName": "Russel",
       "lastName": "Westbrook",
       "email": "rWestbrook@eyoutv.com",
       "position": "Point guard",
       "birthday": "10/12/88"
     }
-  }
+  ]
