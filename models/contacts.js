@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-
+const { Schema, model } = mongoose;
 // Schema needed to build a new contact
-const contactSchema = mongoose.Schema({
+const contactsSchema = new Schema({
     firstName: {
         type: String,
         required: true
@@ -23,4 +23,6 @@ const contactSchema = mongoose.Schema({
         required: true
     }
 });
-module.exports = mongoose.model('Contact', contactSchema);
+const contactSchema = model('contact', contactsSchema);
+
+module.exports =  contactSchema;

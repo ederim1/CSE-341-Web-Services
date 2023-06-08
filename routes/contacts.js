@@ -1,7 +1,23 @@
 const express = require('express');
+const contactSchema = require("../models/contacts");
 
 const router = express.Router();
-const contactSchema = require("../models/contacts");
+
+// create contact
+router.post('/contacts', (req, res) => {
+    const contact = contactSchema(req.body);
+    const { firstName, lastName, email, position, birthday } = req.body;
+    contact
+        .save({
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            position: position,
+            birthday: birthday
+        })
+        .then((data) => res.json(data))
+        .catch((error) => res.json({ message: error }));
+});
 
 // Get contacts
 router.get('/contacts', (req, res) => {
@@ -11,20 +27,12 @@ router.get('/contacts', (req, res) => {
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
+
 // Get contacts by ID
 router.get('/contacts/:id', (req, res) => {
     const { id } = req.params; 
     contactSchema
         .findById(id)
-        .then((data) => res.json(data))
-        .catch((error) => res.json({ message: error }));
-});
-
-// create contact
-router.post('/contacts', (req, res) => {
-    const contact = contactSchema(req.body);
-    contact
-        .save()
         .then((data) => res.json(data))
         .catch((error) => res.json({ message: error }));
 });
