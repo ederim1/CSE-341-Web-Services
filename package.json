@@ -1,11 +1,12 @@
 {
   "name": "cloud-database",
   "version": "1.0.0",
-  "description": "This project demonstrates how to use a cloud database, in this case, Google firebase on a website.  I am using firebase to create a simple table on a website. I chose to use a table of vulnerabilities so they can be added to the database The table allows the user to add its own information providing the fields to fill out It has buttons to add and save the data and to retrieve the information already on the database.",
+  "description": "This project demonstrates how to use mongodb, nodejs, express and swagger.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "swagger": "node swagger.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,9 +14,13 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^7.2.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
-  }
+    "nodemon": "^2.0.22",
+    "swagger-autogen": "^2.23.1"
+  },
+  "keywords": []
 }
